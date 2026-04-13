@@ -13,7 +13,7 @@ import (
 	"github.com/shottaneflow/avito/internal/managers/advertisement/models"
 )
 
-const testSellerID = int64(111289)
+const testSellerID = int64(111299)
 
 type GetSellerItemsSuite struct {
 	suite.Suite

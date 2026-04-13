@@ -40,7 +40,7 @@ func (s *CreateAdvertisementSuite) TestTC_POST_01_SuccessAllFields(t provider.T)
 	var req models.CreateAdvertisementRequest
 	t.WithNewStep("Подготовка тела запроса", func(sCtx provider.StepCtx) {
 		req = models.CreateAdvertisementRequest{
-			SellerID:  111289,
+			SellerID:  111299,
 			Name:      "test",
 			Price:     1000,
 			Statistic: models.Statistic{Likes: 10, ViewCount: 10, Contacts: 10},
@@ -149,7 +149,7 @@ func (s *CreateAdvertisementSuite) TestTC_POST_07_ZeroStatistics(t provider.T) {
 	var req models.CreateAdvertisementRequest
 	t.WithNewStep("Подготовка запроса с нулевой статистикой", func(sCtx provider.StepCtx) {
 		req = models.CreateAdvertisementRequest{
-			SellerID:  111289,
+			SellerID:  111299,
 			Name:      "test",
 			Price:     100,
 			Statistic: models.Statistic{Likes: 0, ViewCount: 0, Contacts: 0},
@@ -242,7 +242,7 @@ func (s *CreateAdvertisementSuite) TestTC_POST_12_MinPrice(t provider.T) {
 	var req models.CreateAdvertisementRequest
 	t.WithNewStep("Подготовка запроса с price=1", func(sCtx provider.StepCtx) {
 		req = models.CreateAdvertisementRequest{
-			SellerID:  111289,
+			SellerID:  111299,
 			Name:      "test",
 			Price:     1,
 			Statistic: models.Statistic{Likes: 1, ViewCount: 1, Contacts: 1},
@@ -275,7 +275,7 @@ func (s *CreateAdvertisementSuite) TestTC_POST_13_MaxPrice(t provider.T) {
 	var req models.CreateAdvertisementRequest
 	t.WithNewStep("Подготовка запроса с максимальным price", func(sCtx provider.StepCtx) {
 		req = models.CreateAdvertisementRequest{
-			SellerID:  111289,
+			SellerID:  111299,
 			Name:      "test",
 			Price:     9223372036854775807,
 			Statistic: models.Statistic{Likes: 1, ViewCount: 1, Contacts: 1},
@@ -306,7 +306,7 @@ func (s *CreateAdvertisementSuite) TestTC_NF_01_Stability(t provider.T) {
 	t.Severity(allure.NORMAL)
 
 	req := models.CreateAdvertisementRequest{
-		SellerID:  111289,
+		SellerID:  111299,
 		Name:      "stability-test",
 		Price:     100,
 		Statistic: models.Statistic{Likes: 1, ViewCount: 1, Contacts: 1},

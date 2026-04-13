@@ -26,7 +26,7 @@ func (s *GetStatisticSuite) BeforeAll(t provider.T) {
 	t.WithNewStep("создание тестового объявления со статистикой", func(sCtx provider.StepCtx) {
 		s.expectedStat = models.Statistic{Likes: 5, ViewCount: 12, Contacts: 8}
 		req := models.CreateAdvertisementRequest{
-			SellerID:  111289,
+			SellerID:  111299,
 			Name:      "stat-test",
 			Price:     300,
 			Statistic: s.expectedStat,

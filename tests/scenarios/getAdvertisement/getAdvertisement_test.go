@@ -24,7 +24,7 @@ func TestGetAdvertisementSuite(t *testing.T) {
 func (s *GetAdvertisementSuite) BeforeAll(t provider.T) {
 	t.WithNewStep("создание тестового объявления", func(sCtx provider.StepCtx) {
 		req := models.CreateAdvertisementRequest{
-			SellerID:  111289,
+			SellerID:  111299,
 			Name:      "get-test",
 			Price:     500,
 			Statistic: models.Statistic{Likes: 3, ViewCount: 7, Contacts: 2},
